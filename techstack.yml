@@ -2,7 +2,7 @@ repo_name: edgybees/mapcache-electron
 report_id: 667b568cfbf79e1a3afd933615da06a5
 version: 0.1
 repo_type: Public
-timestamp: '2024-01-05T08:46:37+00:00'
+timestamp: '2024-02-29T18:42:53+00:00'
 requested_by: caldwellc
 provider: github
 branch: master
@@ -810,7 +810,7 @@ tools:
     cve_url: https://github.com/advisories/GHSA-5fg8-2547-mr8q
     detected_date: Aug 22
     severity: moderate
-    first_patched: 0.7.0
+    first_patched: 
 - name: xpath
   description: DOM 3 XPath implemention and helper for node.js
   package_url: https://www.npmjs.com/xpath
