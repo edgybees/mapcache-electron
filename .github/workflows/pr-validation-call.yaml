@@ -1,0 +1,17 @@
+name: PR Validation
+on:
+  pull_request:
+    types: [opened, edited, reopened, synchronize]
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true # Cancel any running or pending job if a new one is triggered
+
+jobs:
+  conventional-commits:
+    uses: edgybees/org-policies/.github/workflows/pr-names.yaml@master
+    secrets: inherit
+
+  jira-check:
+    uses: edgybees/org-policies/.github/workflows/pr-jira-check.yaml@master
+    secrets: inherit

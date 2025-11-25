@@ -1,0 +1,23 @@
+name: Release Please
+
+on:
+  push:
+  
+permissions:
+  contents: write
+  pull-requests: write
+  issues: write
+
+jobs:
+  release-please:
+    if: github.ref_name == github.event.repository.default_branch
+    runs-on: [general-runner, self-hosted]
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v4
+
+      - uses: googleapis/release-please-action@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }} 
+          release-type: simple
+
