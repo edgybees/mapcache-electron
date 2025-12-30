@@ -21,6 +21,6 @@ jobs:
 
       - uses: googleapis/release-please-action@v4
         with:
-          token: ${{ secrets.GITHUB_TOKEN }} 
+          token: ${{ secrets.ORG_POLICIES_TOKEN }} 
           config-file: .github/release-please-config.json
 
